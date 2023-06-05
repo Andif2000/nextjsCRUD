@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import AddProduct from './addProduct'
+import DeleteProduct from './deleteProduct'
 const prisma = new PrismaClient()
 
 const getProducts = async () => {
@@ -39,13 +40,15 @@ const Product = async () => {
           </tr>
         </thead>
         <tbody>
-          {products.map((products, index) => (
-            <tr key={products.id}>
+          {products.map((product, index) => (
+            <tr key={product.id}>
               <td>{index + 1}</td>
-              <td>{products.title}</td>
-              <td>{products.price}</td>
-              <td>{products.brand.name}</td>
-              <td></td>
+              <td>{product.title}</td>
+              <td>{product.price}</td>
+              <td>{product.brand.name}</td>
+              <td>
+                <DeleteProduct product={product} />
+              </td>
             </tr>
           ))}
         </tbody>
