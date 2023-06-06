@@ -3,6 +3,24 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 import type { Product } from '@prisma/client'
 
+export const PATCH = async (
+  request: Request,
+  { params }: { params: { id: string } },
+) => {
+  const body: Product = await request.json()
+  const product = await prisma.product.update({
+    where: {
+      id: Number(params.id),
+    },
+    data: {
+      title: body.title,
+      price: body.price,
+      brandId: body.brandId,
+    },
+  })
+  return NextResponse.json(product, { status: 200 })
+}
+
 export const DELETE = async (
   request: Request,
   { params }: { params: { id: string } },
