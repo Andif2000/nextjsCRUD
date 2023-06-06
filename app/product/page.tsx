@@ -1,6 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 import AddProduct from './addProduct'
 import DeleteProduct from './deleteProduct'
+import UpdateProduct from './updateProduct'
 const prisma = new PrismaClient()
 
 const getProducts = async () => {
@@ -46,7 +47,8 @@ const Product = async () => {
               <td>{product.title}</td>
               <td>{product.price}</td>
               <td>{product.brand.name}</td>
-              <td>
+              <td className="flex flex-row justify-center space-x-2">
+                <UpdateProduct brands={brands} product={product} />
                 <DeleteProduct product={product} />
               </td>
             </tr>
