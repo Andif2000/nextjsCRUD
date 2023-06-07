@@ -34,7 +34,7 @@ const Product = async () => {
         <thead>
           <tr className="bg-zinc-300 text-black">
             <th>#</th>
-            <th>Product Name</th>
+            <th>Products Name</th>
             <th>Price</th>
             <th>Brand</th>
             <th className="text-center">Action</th>
