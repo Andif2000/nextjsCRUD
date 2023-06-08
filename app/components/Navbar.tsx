@@ -60,23 +60,23 @@ const Navbar = () => {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul className="items-center  justify-center space-y-8  md:flex md:space-x-6 md:space-y-0">
-                <li className="text-white">
+              <ul className="items-center  justify-center space-y-8  md:flex md:space-x-5 md:space-y-0">
+                <li className="text-white hover:bg-green-300 hover:text-black px-3 bg-sky-500 py-2 rounded-md">
                   <Link legacyBehavior href="#">
                     <a>Home</a>
                   </Link>
                 </li>
-                <li className="text-white">
+                <li className="text-white hover:bg-green-300 hover:text-black px-3 bg-sky-500 py-2 rounded-md">
                   <Link legacyBehavior href="#">
                     <a href="#">About</a>
                   </Link>
                 </li>
-                <li className="text-white">
+                <li className="text-white hover:bg-green-300 hover:text-black px-3 bg-sky-500 py-2 rounded-md">
                   <Link legacyBehavior href="#">
                     <a href="#">Login</a>
                   </Link>
                 </li>
-                <li className="text-white">
+                <li className="text-white hover:bg-green-300 hover:text-black px-3 bg-sky-500 py-2 rounded-md">
                   <Link legacyBehavior href="#">
                     <a href="#">Sign Up</a>
                   </Link>
