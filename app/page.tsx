@@ -1,5 +1,7 @@
+import FirstPage from './firstPage/FirstPage'
+
 const Home = () => {
-  return <div>Home Page</div>
+  return <FirstPage />
 }
 
 export default Home
