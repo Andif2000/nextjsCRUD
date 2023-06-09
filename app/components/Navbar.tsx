@@ -20,10 +20,6 @@ const Navbar = () => {
       name: 'About',
       link: '#about',
     },
-    {
-      name: 'Log In',
-      link: '#login',
-    },
   ]
 
   return (
