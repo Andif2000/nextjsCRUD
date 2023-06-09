@@ -24,20 +24,16 @@ const Navbar = () => {
       name: 'Log In',
       link: '#login',
     },
-    {
-      name: 'Sign Up',
-      link: '#signup',
-    },
   ]
 
   return (
-    <div className="flex w-full absolute">
+    <div className="flex w-full">
       <nav className="w-full bg-transparent shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <a href="#">
-                <h2 className="text-2xl text-white font-bold">My App</h2>
+                <h2 className="text-2xl text-white font-bold">Andif20</h2>
               </a>
               <div className="md:hidden">
                 <button
