@@ -1,13 +1,38 @@
-import Head from 'next/head'
+'use client'
+
 import Link from 'next/link'
 import { useState } from 'react'
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false)
+  const [isActived, setIsActived] = useState(false)
+
+  const isNavbar = [
+    {
+      name: 'Home',
+      link: '#home',
+    },
+    {
+      name: 'Product',
+      link: '#product',
+    },
+    {
+      name: 'About',
+      link: '#about',
+    },
+    {
+      name: 'Log In',
+      link: '#login',
+    },
+    {
+      name: 'Sign Up',
+      link: '#signup',
+    },
+  ]
 
   return (
-    <div>
-      <nav className="w-full bg-blue-900 shadow">
+    <div className="flex w-full absolute">
+      <nav className="w-full bg-transparent shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -61,26 +86,20 @@ const Navbar = () => {
               }`}
             >
               <ul className="items-center  justify-center space-y-8  md:flex md:space-x-5 md:space-y-0">
-                <li className="text-white hover:bg-green-300 hover:text-black px-3 bg-sky-500 py-2 rounded-md">
-                  <Link legacyBehavior href="#">
-                    <a>Home</a>
-                  </Link>
-                </li>
-                <li className="text-white hover:bg-green-300 hover:text-black px-3 bg-sky-500 py-2 rounded-md">
-                  <Link legacyBehavior href="#">
-                    <a href="#">About</a>
-                  </Link>
-                </li>
-                <li className="text-white hover:bg-green-300 hover:text-black px-3 bg-sky-500 py-2 rounded-md">
-                  <Link legacyBehavior href="#">
-                    <a href="#">Login</a>
-                  </Link>
-                </li>
-                <li className="text-white hover:bg-green-300 hover:text-black px-3 bg-sky-500 py-2 rounded-md">
-                  <Link legacyBehavior href="#">
-                    <a href="#">Sign Up</a>
-                  </Link>
-                </li>
+                {isNavbar.map((navbar) => (
+                  <li
+                    className={`text-white hover:bg-green-300 hover:text-black px-3 py-2 rounded-md`}
+                  >
+                    <Link legacyBehavior href={navbar.link}>
+                      <a
+                        // onClick={() => setIsActived(true)}
+                        // className={isActived ? 'bg-rose-400' : 'bg-transparent'}
+                      >
+                        {navbar.name}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
