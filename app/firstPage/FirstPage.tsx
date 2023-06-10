@@ -15,7 +15,6 @@ const FirstPage = () => {
       className="relative h-screen"
     >
       <div className="flex h-full w-full flex-col">
-        {/* <Image src={Background} className="w-full h-screen" alt="" /> */}
         <Navbar />
         <div className="flex flex-row px-4 py-4">
           <div className="flex font-bold text-4xl text-zinc-300 w-full justify-center">
@@ -24,7 +23,8 @@ const FirstPage = () => {
           <div className="flex w-full items-center justify-center">
             <div className="flex bg-zinc-400">
               <div className="flex w-96 justify-center">
-                <div className="flex font-bold text-4xl text-white">Login</div>
+                <div className="flex font-bold text-4xl text-white cursor-pointer">Login</div>
+                
               </div>
             </div>
           </div>
