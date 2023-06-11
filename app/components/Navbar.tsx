@@ -5,7 +5,6 @@ import { useState } from 'react'
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false)
-  const [isActived, setIsActived] = useState(false)
 
   const isNavbar = [
     {
@@ -83,10 +82,7 @@ const Navbar = () => {
                     className={`text-white hover:bg-green-300 hover:text-black px-3 py-2 rounded-md`}
                   >
                     <Link legacyBehavior href={navbar.link}>
-                      <a
-                        // onClick={() => setIsActived(true)}
-                        // className={isActived ? 'bg-rose-400' : 'bg-transparent'}
-                      >
+                      <a>
                         {navbar.name}
                       </a>
                     </Link>
