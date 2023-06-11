@@ -16,17 +16,9 @@ const FirstPage = () => {
     >
       <div className="flex h-full w-full flex-col">
         <Navbar />
-        <div className="flex flex-row px-4 py-4">
-          <div className="flex font-bold text-4xl text-zinc-300 w-full justify-center">
-            Welcome to Andif20 Cell
-          </div>
-          <div className="flex w-full items-center justify-center">
-            <div className="flex bg-zinc-400">
-              <div className="flex w-96 justify-center">
-                <div className="flex font-bold text-4xl text-white cursor-pointer">Login</div>
-                
-              </div>
-            </div>
+        <div className="flex w-full h-full min- px-4 py-4 justify-center items-center">
+          <div className="modal-box to-transparent bg-opacity-80">
+            <label className="flex justify-center text-4xl font-bold">LOGIN</label>
           </div>
         </div>
       </div>
