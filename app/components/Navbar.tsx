@@ -82,9 +82,7 @@ const Navbar = () => {
                     className={`text-white hover:bg-green-300 hover:text-black px-3 py-2 rounded-md`}
                   >
                     <Link legacyBehavior href={navbar.link}>
-                      <a>
-                        {navbar.name}
-                      </a>
+                      <a>{navbar.name}</a>
                     </Link>
                   </li>
                 ))}
