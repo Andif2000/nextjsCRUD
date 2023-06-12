@@ -1,9 +1,18 @@
 'use client'
-import Image from 'next/image'
 import Navbar from '../components/Navbar'
-import Background from '../../public/images/background.jpg'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
+
+import { useState } from 'react'
 
 const FirstPage = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword)
+  }
+  
   return (
     <div
       style={{
@@ -18,7 +27,47 @@ const FirstPage = () => {
         <Navbar />
         <div className="flex w-full h-full min- px-4 py-4 justify-center items-center">
           <div className="modal-box to-transparent bg-opacity-80">
-            <label className="flex justify-center text-4xl font-bold">LOGIN</label>
+            <label className="flex justify-center text-4xl font-bold text-lime-100">
+              LOGIN
+            </label>
+            <form action="">
+              <div className="flex flex-col mt-6 form-control">
+                <label className="flex text-xl text-lime-50">Username</label>
+                <input
+                  className="bg-lime-100 w-full rounded-md h-12 mt-1 px-3 text-black text-lg focus"
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => {
+                    setUsername(e.target.value)
+                  }}
+                />
+              </div>
+              <div className="flex flex-col mt-6 form-control">
+                <label className="flex text-xl text-lime-50">Password</label>
+                <div className="flex">
+                  <input
+                    className="bg-lime-100 w-full rounded-md h-12 mt-1 px-3 text-black text-lg focus"
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value)
+                    }}
+                  />
+                  <div
+                    className="flex cursor-pointer items-center absolute"
+                    onClick={handleShowPassword}
+                  >
+                    {showPassword ? (
+                      <AiOutlineEye size={28} />
+                    ) : (
+                      <AiOutlineEyeInvisible size={28} />
+                    )}
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
