@@ -6,13 +6,13 @@ import { useState } from 'react'
 
 const FirstPage = () => {
   const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('        ')
   const [showPassword, setShowPassword] = useState(false)
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword)
   }
-  
+
   return (
     <div
       style={{
@@ -26,7 +26,7 @@ const FirstPage = () => {
       <div className="flex h-full w-full flex-col">
         <Navbar />
         <div className="flex w-full h-full min- px-4 py-4 justify-center items-center">
-          <div className="modal-box to-transparent bg-opacity-80">
+          <div className="modal-box to-transparent bg-opacity-80 border-2">
             <label className="flex justify-center text-4xl font-bold text-lime-100">
               LOGIN
             </label>
@@ -56,7 +56,7 @@ const FirstPage = () => {
                     }}
                   />
                   <div
-                    className="flex cursor-pointer items-center absolute"
+                    className="flex cursor-pointer items-center absolute right-10 mt-3"
                     onClick={handleShowPassword}
                   >
                     {showPassword ? (
@@ -66,6 +66,24 @@ const FirstPage = () => {
                     )}
                   </div>
                 </div>
+              </div>
+              <div className="flex justify-end mt-6">
+                <button type="submit" className="btn btn-success mr-4">
+                  Login
+                </button>
+                <button
+                  type="submit"
+                  className="btn btn-error"
+                  onClick={() => {
+                    setUsername(''), setPassword('')
+                  }}
+                >
+                  Cancel
+                </button>
+              </div>
+              <div className='flex justify-center mt-12'>
+                <label>do you not have an account?</label>
+                <button className='pl-2 text-blue-300'>Sign Up</button>
               </div>
             </form>
           </div>
