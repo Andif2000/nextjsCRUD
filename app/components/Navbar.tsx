@@ -1,10 +1,16 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
+import Link from 'next/link'
+import Login from '../firstPage/Login'
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleLogin = () => {
+    setIsOpen(!isOpen)
+  }
 
   const isNavbar = [
     {
@@ -18,6 +24,10 @@ const Navbar = () => {
     {
       name: 'About',
       link: '#about',
+    },
+    {
+      name: 'Login',
+      link: '',
     },
   ]
 
@@ -81,7 +91,13 @@ const Navbar = () => {
                   <li
                     className={`text-white hover:bg-green-300 hover:text-black px-3 py-2 rounded-md`}
                   >
-                    <Link legacyBehavior href={navbar.link}>
+                    <Link
+                      legacyBehavior
+                      href={'#'}
+                      onClick={() => {
+                        navbar.link
+                      }}
+                    >
                       <a>{navbar.name}</a>
                     </Link>
                   </li>
