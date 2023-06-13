@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Login from '../firstPage/Login'
 
-const Navbar = () => {
+const Navbar = (props: any) => {
   const [navbar, setNavbar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -27,7 +27,7 @@ const Navbar = () => {
     },
     {
       name: 'Login',
-      link: '',
+      link: handleLogin,
     },
   ]
 
@@ -98,7 +98,7 @@ const Navbar = () => {
                         navbar.link
                       }}
                     >
-                      <a>{navbar.name}</a>
+                      {navbar.name}
                     </Link>
                   </li>
                 ))}
@@ -107,6 +107,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      <Login isOpen={false} />
     </div>
   )
 }
