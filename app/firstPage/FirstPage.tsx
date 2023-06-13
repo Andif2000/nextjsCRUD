@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 import { useState } from 'react'
+import Login from './Login'
 
 const FirstPage = () => {
   const [username, setUsername] = useState('')
@@ -24,8 +25,8 @@ const FirstPage = () => {
       className="relative h-screen"
     >
       <div className="flex h-full w-full flex-col">
-        <Navbar />
-        <div className="flex w-full h-full min- px-4 py-4 justify-center items-center">
+        <Navbar/>
+        {/* <div className="flex w-full h-full min- px-4 py-4 justify-center items-center">
           <div className="modal-box to-transparent bg-opacity-80 border-2">
             <label className="flex justify-center text-4xl font-bold text-lime-100">
               LOGIN
@@ -56,7 +57,7 @@ const FirstPage = () => {
                     }}
                   />
                   <div
-                    className="flex cursor-pointer items-center absolute right-10 mt-3"
+                    className="flex cursor-pointer items-center absolute right-10 mt-3.5"
                     onClick={handleShowPassword}
                   >
                     {showPassword ? (
@@ -87,7 +88,7 @@ const FirstPage = () => {
               </div>
             </form>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
