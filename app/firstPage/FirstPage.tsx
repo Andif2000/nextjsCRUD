@@ -1,5 +1,6 @@
 'use client'
 import Navbar from '../components/Navbar'
+import bg from '../../public/images/bg1.jpg'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 import { useState } from 'react'
@@ -17,15 +18,17 @@ const FirstPage = () => {
   return (
     <div
       style={{
-        backgroundImage: `url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Grass_at_a_lawn_with_morning_dew_02.jpg")`,
-        height: '100vh',
-        backgroundRepeat: 'no-repeat',
+        backgroundImage: `url(${bg.src})`,
+        backgroundAttachment:'fixed',
+        width:'100%',
+        backgroundPosition:'center',
         backgroundSize: 'cover',
+        backgroundRepeat:'no-repeat',
       }}
       className="relative h-screen"
     >
       <div className="flex h-full w-full flex-col">
-        <Navbar/>
+        <Navbar />
         {/* <div className="flex w-full h-full min- px-4 py-4 justify-center items-center">
           <div className="modal-box to-transparent bg-opacity-80 border-2">
             <label className="flex justify-center text-4xl font-bold text-lime-100">
