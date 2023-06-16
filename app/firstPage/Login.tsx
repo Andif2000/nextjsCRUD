@@ -13,11 +13,11 @@ const Login = (props: any) => {
   const [password, setPassword] = useState('        ')
   const [showPassword, setShowPassword] = useState(false)
 
-  const handleShowPassword = () => {
-    setShowPassword(!showPassword)
-  }
   const handleLogin = () => {
     setIsOpen(!isOpen)
+  }
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword)
   }
 
   return (
