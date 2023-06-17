@@ -30,7 +30,7 @@ const Login = (props: any) => {
           >
             <AiFillCloseCircle size={28} />
           </button>
-          <label className="flex justify-center text-4xl font-bold text-lime-100">
+          <label className="flex justify-center text-4xl text-lime-100 font-bold ">
             LOGIN
           </label>
           <form action="">
