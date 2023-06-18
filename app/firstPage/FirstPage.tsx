@@ -21,8 +21,8 @@ const FirstPage = () => {
         backgroundImage: `url(${bg.src})`,
         backgroundAttachment:'fixed',
         width:'100%',
-        backgroundPosition:'center',
         backgroundRepeat:'no-repeat',
+        backgroundPosition:'center',
         backgroundSize: 'cover',
       }}
       className="relative h-screen"
