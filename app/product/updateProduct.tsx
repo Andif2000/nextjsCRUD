@@ -18,10 +18,10 @@ const UpdateProduct = ({
   brands: Brand[]
   product: Product
 }) => {
-  const [isOpen, setIsOpen] = useState(false)
   const [title, setTitle] = useState(product.title)
   const [price, setPrice] = useState(product.price)
   const [brand, setBrand] = useState(product.brandId)
+  const [isOpen, setIsOpen] = useState(false)
 
   const router = useRouter()
 
