@@ -20,10 +20,10 @@ const FirstPage = () => {
       style={{
         backgroundImage: `url(${bg.src})`,
         backgroundAttachment:'fixed',
+        backgroundSize: 'cover',
         width:'100%',
         backgroundRepeat:'no-repeat',
         backgroundPosition:'center',
-        backgroundSize: 'cover',
       }}
       className="relative h-screen"
     >
