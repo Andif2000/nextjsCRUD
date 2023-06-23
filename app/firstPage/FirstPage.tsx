@@ -19,9 +19,9 @@ const FirstPage = () => {
     <div
       style={{
         backgroundImage: `url(${bg.src})`,
+        width:'100%',
         backgroundAttachment:'fixed',
         backgroundSize: 'cover',
-        width:'100%',
         backgroundRepeat:'no-repeat',
         backgroundPosition:'center',
       }}
