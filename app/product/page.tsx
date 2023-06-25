@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 import AddProduct from './addProduct'
-import DeleteProduct from './deleteProduct'
 import UpdateProduct from './updateProduct'
+import DeleteProduct from './deleteProduct'
 const prisma = new PrismaClient()
 
 const getProducts = async () => {
