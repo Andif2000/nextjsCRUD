@@ -26,8 +26,8 @@ const AddProduct = ({ brands }: { brands: Brand[] }) => {
     setTitle('')
     setBrand('')
     setPrice('')
-    router.refresh()
     setIsOpen(false)
+    router.refresh()
   }
 
   return (
