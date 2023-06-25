@@ -22,8 +22,8 @@ const FirstPage = () => {
         width:'100%',
         backgroundAttachment:'fixed',
         backgroundSize: 'cover',
-        backgroundRepeat:'no-repeat',
         backgroundPosition:'center',
+        backgroundRepeat:'no-repeat',
       }}
       className="relative h-screen"
     >
