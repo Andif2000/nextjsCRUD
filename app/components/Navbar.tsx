@@ -5,8 +5,8 @@ import Login from '../firstPage/Login'
 import Link from 'next/link'
 
 const Navbar = (props: any) => {
-  const [navbar, setNavbar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const [navbar, setNavbar] = useState(false)
 
   const handleLogin = () => {
     setIsOpen(!isOpen)
