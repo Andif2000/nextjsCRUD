@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import Login from '../firstPage/Login'
+import Link from 'next/link'
 
 const Navbar = (props: any) => {
   const [navbar, setNavbar] = useState(false)
