@@ -2,7 +2,6 @@
 import Navbar from '../components/Navbar'
 import bg from '../../public/images/bg1.jpg'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
-
 import { useState } from 'react'
 import Login from './Login'
 
