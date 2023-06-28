@@ -37,7 +37,7 @@ const Login = (props: any) => {
             <div className="flex flex-col mt-6 form-control">
               <label className="flex text-xl text-lime-50">Username</label>
               <input
-                className="bg-lime-100 w-full rounded-md h-12 mt-1 px-3 text-black text-lg focus"
+                className="bg-lime-100 w-full  text-black text-lg rounded-md h-12 mt-1 px-3 focus"
                 type="text"
                 placeholder="Username"
                 value={username}
