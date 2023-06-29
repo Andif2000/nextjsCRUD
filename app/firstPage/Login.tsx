@@ -24,10 +24,7 @@ const Login = (props: any) => {
     <div className={isOpen ? 'modal' : 'modal modal-open'}>
       <div className="flex w-full h-full min- px-4 py-4 justify-center items-center">
         <div className="modal-box to-transparent bg-opacity-80 border-2">
-          <button
-            className="flex absolute right-6"
-            onClick={handleLogin}
-          >
+          <button className="flex absolute right-6" onClick={handleLogin}>
             <AiFillCloseCircle size={28} />
           </button>
           <label className="flex justify-center text-4xl text-lime-100 font-bold ">
