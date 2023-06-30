@@ -82,7 +82,7 @@ const Login = (props: any) => {
               </button>
             </div>
             <div className="flex justify-center mt-12">
-              <label>do you not have an account?</label>
+              <label>do you not have an Account?</label>
               <button className="pl-2 text-blue-300">Sign Up</button>
             </div>
           </form>
