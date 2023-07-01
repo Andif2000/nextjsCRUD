@@ -22,7 +22,6 @@ const UpdateProduct = ({
   const [price, setPrice] = useState(product.price)
   const [brand, setBrand] = useState(product.brandId)
   const [isOpen, setIsOpen] = useState(false)
-
   const router = useRouter()
 
   const handleModal = () => {
